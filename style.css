@@ -1,0 +1,174 @@
+/* Variables */
+:root {
+    --violet: hsl(257, 40%, 49%);
+    --magenta: hsl(300, 69%, 71%);
+}
+
+/* CSS RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: var(--violet);
+    max-width: 100vw;
+    font-family: 'Poppins';
+}
+
+/* UTILITIES */
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.btn {
+    display: inline-block;
+    background-color: white;
+    padding: 1rem 6.5rem;
+    border-radius: 20px;
+    margin: 2rem auto;
+    font-size: 1rem;
+    color: var(--violet);
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.575);
+}
+
+.btn:hover {
+    background-color: var(--magenta);
+    color: white;
+}
+
+/* IMAGE HEADER */
+.content .header {
+    background-image: url(./images/bg-mobile.svg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+}
+
+.content .header .logo {
+    display: block;
+    max-width: 150px;
+    height: auto;
+    width: auto;
+    padding: 2rem 2rem;
+
+}
+
+.content .header .showcase {
+    display: block;
+    max-width: 260px;
+    height: auto;
+    width: auto;
+    margin: 2rem auto;
+    
+}
+
+/* DESCRIPTION */
+.description {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.986);
+}
+
+.description h1 {
+    font-size: 2.2rem;
+    padding: 2rem 2rem;
+}
+
+.description p {
+    font-size: 1.2rem;
+    color: rgb(230, 230, 230);
+    padding: 0rem 3rem;
+    line-height: 1.8;
+    letter-spacing: 0.03rem;
+}
+
+/* ICONS */
+.content .icons ul li {
+    list-style: none;
+    display: inline-block;
+    font-size: 1.2rem;
+    margin: 5rem 0.5rem;
+}
+
+.content .icons ul li a {
+    color: white;
+    border: 1px solid white;
+    padding: 0.5rem 1rem;
+    border-radius: 50%;
+}
+
+.content .icons ul li a:hover {
+    color: var(--magenta);
+    border: 1px solid var(--magenta);
+}
+
+@media(min-width: 992px) {
+    .content .header {
+        background-image: none;
+        min-height: 100vh;
+        min-width: 50vw;
+    }
+
+    .content {
+        background-image: url(./images/bg-desktop.svg);
+        background-position: center;
+        background-size: cover;
+        flex-direction: row;
+        min-height: 100vh;
+    }
+
+    .content .header .logo {
+        max-width: 250px;
+    }
+
+    .content .header .showcase {
+        max-width: 600px;
+        padding: 2rem
+    }
+
+    .content .description {
+        min-height: 100vh;
+        padding: 0rem 4rem;
+
+    }
+    .content .description h1 {
+        font-size: 3.2rem;
+        text-align: left;
+        margin-top: 14rem;
+        margin-right: 22rem;
+        margin-left: 1rem;
+    }
+     
+    .content .description p {
+        text-align: left;
+        font-size: 1.4rem;
+        margin-right: 13rem;
+    }
+
+    .btn {
+        padding: 1.5rem 6rem;
+        border-radius: 30px;
+        font-size: 1.6rem;
+    }
+
+    .content .icons ul {
+        position: fixed;
+        bottom: 0;
+        right: 10%;
+    }
+
+    .content .icons ul li a {
+        font-size: 1.8rem;
+    }
+}
